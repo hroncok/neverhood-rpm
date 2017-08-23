@@ -1,0 +1,43 @@
+#!/usr/bin/python3
+import appdirs
+import pathlib
+import shutil
+import subprocess
+import sys
+
+
+ARGS = sys.argv[1:]
+SCUMMVM = '/usr/bin/scummvm'
+GAMENAME = 'neverhood-win'
+CONFIG_NAME = 'neverhood.ini'
+
+USER_CONFIG_DIR = pathlib.Path(appdirs.user_config_dir())
+USER_CONFIG = USER_CONFIG_DIR / CONFIG_NAME
+
+SITE_CONFIG_DIR = pathlib.Path(appdirs.site_config_dir())
+SITE_CONFIG = SITE_CONFIG_DIR / CONFIG_NAME
+
+
+def is_config_option_used():
+    if '--config' in ARGS:
+        return True
+    for arg in ARGS:
+        if arg.startswith(('-c', '--config=')):
+            return True
+    return False
+
+
+def run_neverhood():
+    command = [SCUMMVM] + ARGS
+    if not is_config_option_used():
+        if not USER_CONFIG.exists():
+            USER_CONFIG_DIR.mkdir(parents=True, exist_ok=True)
+            print(f'Copying {USER_CONFIG} to {SITE_CONFIG}')
+            shutil.copy(SITE_CONFIG, USER_CONFIG)
+        command.append(f'--config={USER_CONFIG}')
+    command.append(GAMENAME)
+    return subprocess.run(command).returncode
+
+
+if __name__ == '__main__':
+    sys.exit(run_neverhood())

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=The Neverhood
+Comment=1996 point-and-click adventure claymation game
+Exec=neverhood
+Icon=neverhood
+Terminal=false
+Type=Application
+Categories=Game;AdventureGame;
+StartupNotify=true
+Keywords=game;adventure;adventuregame;
