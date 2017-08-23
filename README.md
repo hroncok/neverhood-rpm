@@ -28,6 +28,20 @@ Enjoy.
 License
 -------
 
-The Neverhood is © 1996 The Neverhood, All Rights Reserved.
+The Neverhood is:
+
+> © & ℗ 1995 - 1996 Microsoft Corporation. All rights reserved.
+>
+> © & ℗ 1996 DreamWorks Interactive L.L.C. All rights reserved.
+>
+> Warning: This computer program is protected by copyright
+> law and international treaties. Unauthorized reproduction or
+> distribution of this program, or any portion of it, may result in
+> severe civil and criminal penalties, and will be prosecuted
+> to the maximum extent possible under the law.
+>
+> "The Neverhood" is a registered trademark of the Neverhood.
+>
+> "DreamWorks Interactive" is a trademark of DreamWorks L.L.C.
 
 The files in this repository are Public Domain.
