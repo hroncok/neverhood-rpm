@@ -5,7 +5,7 @@ How to build
 ------------
 
  1. get `Neverhood.iso`, place it in this folder
- 2. run `fedpkg --release f26 mockbuild` or similar
+ 2. run `fedpkg --release f26 --module-name neverhood mockbuild` or similar
  3. install resulting RPM (from `results_neverhood/`)
 
 Using
