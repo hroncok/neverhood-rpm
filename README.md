@@ -23,3 +23,11 @@ or `fullscreen` to `false`.
 Enjoy.
 
 ![Illustrative pic](http://neverhood.etomite.sk/imgs/galcredits/large/credit17.jpg)
+
+
+License
+-------
+
+The Neverhood is © 1996 The Neverhood, All Rights Reserved.
+
+The files in this repository are Public Domain.
