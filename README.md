@@ -20,6 +20,8 @@ There is a config file in `/etc/xdg/neverhood.ini` that is copied to
 options in your config, such as setting `skiphallofrecordsscenes` to `true`
 or `fullscreen` to `false`.
 
+You can toggle fullscreen with <kbd>Alt</kbd>+<kbd>Enter</kbd>.
+
 Enjoy.
 
 ![Illustrative pic](http://neverhood.etomite.sk/imgs/galcredits/large/credit17.jpg)
