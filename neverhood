@@ -32,7 +32,7 @@ def run_neverhood():
     if not is_config_option_used():
         if not USER_CONFIG.exists():
             USER_CONFIG_DIR.mkdir(parents=True, exist_ok=True)
-            print(f'Copying {USER_CONFIG} to {SITE_CONFIG}')
+            print(f'Copying {SITE_CONFIG} to {USER_CONFIG}')
             shutil.copy(SITE_CONFIG, USER_CONFIG)
         command.append(f'--config={USER_CONFIG}')
     command.append(GAMENAME)
