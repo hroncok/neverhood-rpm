@@ -45,11 +45,13 @@ files.
 %prep
 %setup -Tc
 7z x %{SOURCE0}
-dos2unix readme.txt
-iconv -f cp850 -t utf-8 readme.txt -o readme.txt
+shopt -s nocaseglob
+dos2unix readme.*
+iconv -f cp850 -t utf-8 readme.* -o readme.txt
 
 
 %build
+shopt -s nocaseglob
 for res in 16 32 48; do
   mkdir -p hicolor/${res}x${res}/apps
 done
@@ -63,6 +65,7 @@ cd -
 
 
 %install
+shopt -s nocaseglob
 mkdir -p %{buildroot}%{_datadir}/games/%{name}/DATA
 install -m 644 DATA/*.blb %{buildroot}%{_datadir}/games/%{name}/DATA/
 
@@ -90,7 +93,7 @@ done
 %config(noreplace) %{_sysconfdir}/xdg/%{name}.ini
 %dir %{_datadir}/games/%{name}
 %dir %{_datadir}/games/%{name}/DATA
-%{_datadir}/games/%{name}/DATA/*.blb
+%{_datadir}/games/%{name}/DATA/*.[Bb][Ll][Bb]
 
 %changelog
 * Wed Aug 23 2017 Miro Hrončok <mhroncok@redhat.com> - 1-1
